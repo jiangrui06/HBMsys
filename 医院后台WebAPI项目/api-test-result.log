@@ -1,0 +1,22 @@
+[患者首页] success=True message=获取成功
+[挂号-骨科] success=True message=挂号成功
+[药品列表] success=True message=查询成功
+[开处方] success=True message=处方开具成功
+[查询处方] success=True message=查询成功
+[生成就诊记录] success=True message=就诊记录生成成功
+[查询就诊记录] success=True message=查询成功
+[生成收费单] success=True message=收费单生成成功
+[缴费] success=True message=缴费成功，票据已生成
+[发药] success=True message=发药成功，库存已扣减
+[录入报告] success=True message=检查报告录入成功
+[查询报告] success=True message=查询成功
+
+--- 异常测试 ---
+[异常-不存在科室] success=False message=科室 不存在科室 不存在，请选择有效科室
+[异常-库存不足] success=False message=药品 阿莫西林胶囊 库存不足，当前库存 98
+[异常-重复缴费] success=False message=该收费单已结算，不能重复缴费
+[异常-重复发药] success=False message=该处方已发药，请勿重复发药
+[异常-处方不存在] success=False message=处方不存在
+[异常-重复就诊记录] success=False message=该处方已生成就诊记录，请勿重复生成
+[异常-无报告] success=True message=暂无报告
+[异常-时间范围无数据] success=True message=当前时间段无记录
