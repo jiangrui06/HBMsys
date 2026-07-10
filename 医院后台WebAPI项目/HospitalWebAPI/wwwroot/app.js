@@ -299,6 +299,7 @@ async function addPrescription() {
                 <div class="col-md-2"><button class="btn btn-danger w-100" onclick="removePresItem(this)">删除</button></div>
             </div>`;
         updateMedicineSelects();
+        document.getElementById('presIdQuery').value = result.data.id;
         delayedRefresh(queryPrescription);
     }
 }
@@ -495,7 +496,12 @@ async function loadAllReports() {
 async function runFullFlow() {
     const container = document.getElementById('flowResult');
     container.innerHTML = '<div class="alert alert-info">正在执行完整流程，请稍候...</div>';
-    const flowName = '流程演示患者' + Math.floor(Math.random() * 10000);
+    const randomLetters = (len) => {
+        let s = '';
+        for (let i = 0; i < len; i++) s += String.fromCharCode(65 + Math.floor(Math.random() * 26));
+        return s;
+    };
+    const flowName = '流程演示患者' + randomLetters(4);
     const flowPhone = '138' + Math.floor(Math.random() * 100000000).toString().padStart(8, '0');
     const logs = [];
 
